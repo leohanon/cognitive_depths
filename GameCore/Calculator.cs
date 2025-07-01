@@ -1,4 +1,4 @@
-﻿namespace GameCore;
+namespace GameCore;
 
 public class Calculator
 {
@@ -7,7 +7,9 @@ public class Calculator
     /// </summary>
     public int Sum(int a, int b)
     {
-        return a + b;
+        int result = a + b;
+        Console.WriteLine($"Adding {a} + {b} = {result}");
+        return result;
     }
 
     /// <summary>
@@ -15,7 +17,9 @@ public class Calculator
     /// </summary>
     public int Sum(params int[] numbers)
     {
-        return numbers.Sum();
+        int result = numbers.Sum();
+        Console.WriteLine($"Adding [{string.Join(", ", numbers)}] = {result}");
+        return result;
     }
 
     /// <summary>
@@ -23,7 +27,9 @@ public class Calculator
     /// </summary>
     public decimal Sum(decimal a, decimal b)
     {
-        return a + b;
+        decimal result = a + b;
+        Console.WriteLine($"Adding {a} + {b} = {result}");
+        return result;
     }
 
     /// <summary>
@@ -31,6 +37,8 @@ public class Calculator
     /// </summary>
     public decimal Sum(List<decimal> numbers)
     {
-        return numbers.Sum();
+        decimal result = numbers.Sum();
+        Console.WriteLine($"Adding [{string.Join(", ", numbers)}] = {result}");
+        return result;
     }
-}
+} 
